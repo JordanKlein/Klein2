@@ -15,22 +15,106 @@ window.onload = function init()
     //
     //(red, green, blue) values for all of the vertices
     var colors = [
+    	//Triangle 1 (Head Top) Colors
+        vec3(1.0, 0.0, 0.0),
         vec3(1.0, 0.0, 0.0),
         vec3(1.0, 1.0, 0.0),
+        // Triangle 2 (Head Bottom) Colors
+        vec3(1.0, 1.0, 0.0),
+        vec3(1.0, 1.0, 0.0),
+        vec3(1.0, 0.0, 0.0),
+        // 3rd Triangle (Body Top and Right) Colors
+        vec3(1.0, 1.0, 0.0),
+        vec3(0.0, 1.0, 1.0), 
         vec3(1.0, 0.0, 1.0),
-        vec3(0.0, 0.0, 1.0),
-        vec3(0.0, 0.0, 1.0),
-        vec3(0.0, 0.0, 1.0)
+        // 4th Triangle (Body Bottom and Left) Colors
+        vec3(0.0, 1.0, 1.0),
+        vec3(1.0, 0.0, 1.0), 
+        vec3(1.0, 1.0, 0.0),
+        // 5th Triangle (Left Arm Bottom and Right) Colors
+        vec3(1.0, 1.0, 0.0),
+        vec3(1.0, 1.0, 0.0), 
+        vec3(1.0, 1.0, 0.0),
+        // 6th Triangle (Left Arm Top and Left) Colors
+        vec3(1.0, 1.0, 0.0),
+        vec3(1.0, 1.0, 0.0), 
+        vec3(1.0, 1.0, 0.0),
+        // 7th Triangle (Right Arm Bottom and Left) Colors
+        vec3(1.0, 1.0, 0.0),
+        vec3(1.0, 1.0, 0.0), 
+        vec3(1.0, 1.0, 0.0),
+        // 8th Triangle (Right Arm Top and Right) Colors
+        vec3(1.0, 1.0, 0.0),
+        vec3(1.0, 1.0, 0.0), 
+        vec3(1.0, 1.0, 0.0),
+        // 9th Triangle (Left Leg Top and Left) Colors
+        vec3(1.0, 0.0, 1.0),
+        vec3(1.0, 0.0, 1.0), 
+        vec3(1.0, 0.0, 1.0),
+        // 10th Triangle (Left Leg Bottom and Right) Colors
+        vec3(1.0, 0.0, 1.0),
+        vec3(1.0, 0.0, 1.0), 
+        vec3(1.0, 0.0, 1.0),
+        // 11th Triangle (Right Leg Top and Right) Colors
+        vec3(1.0, 0.0, 1.0),
+        vec3(1.0, 0.0, 1.0), 
+        vec3(1.0, 0.0, 1.0),
+        // 12th Triangle (Right Leg Bottom and Left) Colors
+        vec3(1.0, 0.0, 1.0),
+        vec3(1.0, 0.0, 1.0), 
+        vec3(1.0, 0.0, 1.0),
     ];
 
     // And, add our vertices point into our array of points
     points = [
-        vec2( -1, -1 ), //1st triangle
-        vec2(  1, -1 ), 
-        vec2(  0,  0 ),
-        vec2(-.3, .3 ), //2nd triangle
-        vec2( .3, .3 ), 
-        vec2(  0,  1 ), 
+    	// 1st Triangle (Head Top) Points
+        vec2(-0.25, 1.0),
+        vec2( 0.25, 1.0), 
+        vec2( 0.25, 0.75),
+        // 2nd Triangle (Head Bottom) Points
+        vec2( 0.25, 0.75),
+        vec2(-0.25, 0.75), 
+        vec2(-0.25, 1.0), 
+        // 3rd Triangle (Body Top and Right) Points
+        vec2(-0.5, 0.75),
+        vec2( 0.5, 0.75), 
+        vec2( 0.5, -0.25),
+        // 4th Triangle (Body Bottom and Left) Points
+        vec2(-0.5, -0.25),
+        vec2( 0.5, -0.25), 
+        vec2(-0.5, 0.75),
+        // 5th Triangle (Left Arm Bottom and Right) Points
+        vec2(-0.5, 0.75),
+        vec2(-0.5, 0.5), 
+        vec2(-1.0, -0.25),
+        // 6th Triangle (Left Arm Top and Left) Points
+        vec2(-0.5, 0.75),
+        vec2(-1.0, 0.75), 
+        vec2(-1.0, -0.25),
+        // 7th Triangle (Right Arm Bottom and Left) Points
+        vec2(0.5, 0.75),
+        vec2(0.5, 0.5), 
+        vec2(1.0, -0.25),
+        // 8th Triangle (Right Arm Top and Right) Points
+        vec2(0.5, 0.75),
+        vec2(1.0, 0.75), 
+        vec2(1.0, -0.25),
+        // 9th Triangle (Left Leg Top and Left) Points
+        vec2(-0.5, -0.25),
+        vec2(-0.25, -0.25), 
+        vec2(-1.0, -1.0),
+        // 10th Triangle (Left Leg Bottom and Right) Points
+        vec2(-0.25, -0.25),
+        vec2(-0.25, -1.0), 
+        vec2(-1.0, -1.0),
+        // 11th Triangle (Right Leg Top and Right) Points
+        vec2(0.5, -0.25),
+        vec2(0.25, -0.25), 
+        vec2(1.0, -1.0),
+        // 12th Triangle (Right Leg Bottom and Left) Points
+        vec2(0.25, -0.25),
+        vec2(0.25, -1.0), 
+        vec2(1.0, -1.0),
         ];
 
     //  Configure WebGL
